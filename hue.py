@@ -47,7 +47,7 @@ if selected == "Diagnostic":
     if uploaded_file is not None:
         # Convert the file
         img = image.load_img(uploaded_file,target_size=(64,64))
-        st.image(uploaded_file, channels="RGB", target_size=(150,150))
+        st.image(uploaded_file, channels="RGB")
         #plt.imshow(img)
         img = img_to_array(img)
         img = img.reshape(1,64,64,3)
