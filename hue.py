@@ -41,8 +41,8 @@ if selected == "Diagnostic":
     map_dict = {0: 'NORMAL',
                 1: 'PNEUMONIA'}
     
-    doan = {0: 'BACTERIA',
-            1: 'VIRUS'}
+    doan = {0: 'BACTERIAL PNEUMONIA',
+            1: 'VIRAL PNEUMONIA'}
     
     if uploaded_file is not None:
         # Convert the file
