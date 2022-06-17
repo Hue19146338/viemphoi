@@ -58,7 +58,7 @@ if selected == "Diagnostic":
     
             with st.spinner("Running!"):
                 time.sleep(2)
-            prediction = model.predict(img)
+            prediction = model.predict(img).argmax()
             if prediction == 0:
                 st.title("Predicted Label for the image is NORMAL")
             else:
