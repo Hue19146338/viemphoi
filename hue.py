@@ -59,11 +59,11 @@ if selected == "Diagnostic":
             with st.spinner("Running!"):
                 time.sleep(2)
             prediction = model.predict(img).argmax()
-            y_pre = model.predict(img)
+            y_pred = model.predict(img)
             if prediction == 0:
                 st.title("Predicted Label for the image is NORMAL")
                 a = y_pred.max()
-                st.subheader("Largest number in list is: ",a)
+                st.subheader("Largest number in list is: ",a," %")
             else:
                 prediction1 = model1.predict(img).argmax()
                 st.title("Predicted Label for the image is {}".format(doan [prediction1]))
