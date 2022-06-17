@@ -69,7 +69,7 @@ if selected == "Diagnostic":
                 prediction1 = model1.predict(img).argmax()
                 st.title("Predicted Label for the image is {}".format(doan [prediction1]))
                 b = y_pre.max()
-                st.write("**Accuracy:** ", b)
+                st.write("**Accuracy:** ", **b**)
   
 if selected == "More":
     
