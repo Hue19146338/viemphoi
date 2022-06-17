@@ -60,13 +60,16 @@ if selected == "Diagnostic":
                 time.sleep(2)
             prediction = model.predict(img).argmax()
             y_pred = model.predict(img)
+            y_pre = model.predict(img)
             if prediction == 0:
                 st.title("Predicted Label for the image is NORMAL")
                 a = y_pred.max()
-                st.write("Accuracy: ",a)
+                st.title("Accuracy: ",a)
             else:
                 prediction1 = model1.predict(img).argmax()
                 st.title("Predicted Label for the image is {}".format(doan [prediction1]))
+                b = y_pre.max()
+                st.title("Accuracy: ",b)
   
 if selected == "More":
     
