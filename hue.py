@@ -34,10 +34,7 @@ if selected == "Diagnostic":
     
     ### load file
     uploaded_file = st.file_uploader("Choose an image file", type=["jpg","jpeg","png"])
-    
-    #map_dict = {0: 'BACTERIA',
-                #1: 'NORMAL'}
-                #2: 'VIRUS'}
+
     map_dict = {0: 'NORMAL',
                 1: 'PNEUMONIA'}
     
@@ -61,7 +58,7 @@ if selected == "Diagnostic":
     
             with st.spinner("Running!"):
                 time.sleep(2)
-            prediction = model.predict(img).argmax()
+            prediction = model.predict(img)
             if prediction == 0:
                 st.title("Predicted Label for the image is NORMAL")
             else:
