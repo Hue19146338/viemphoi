@@ -63,7 +63,7 @@ if selected == "Diagnostic":
             if prediction == 0:
                 st.title("Predicted Label for the image is NORMAL")
                 biggest = max(y_pre)
-                print(biggest)
+                st.subheader(biggest)
             else:
                 prediction1 = model1.predict(img).argmax()
                 st.title("Predicted Label for the image is {}".format(doan [prediction1]))
