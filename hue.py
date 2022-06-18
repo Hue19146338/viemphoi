@@ -44,13 +44,13 @@ if selected == "Diagnostic":
     if uploaded_file is not None:
         # Convert the file
         img = image.load_img(uploaded_file,target_size=(64,64))
-        st.image(uploaded_file, channels="RGB")
+        #st.image(uploaded_file, channels="RGB")
         #plt.imshow(img)
         img = img_to_array(img)
         img = img.reshape(1,64,64,3)
         img = img.astype('float32')
         img = img/255
-        
+        t.image(img, channels="RGB")
         #Button
         Genrate_pred = st.button("Generate Prediction") 
     
@@ -62,13 +62,13 @@ if selected == "Diagnostic":
             y_pred = model.predict(img)
             y_pre = model.predict(img)
             if prediction == 0:
-                st.title("Predicted Label for the image is NORMAL")
+                st.write("**Predicted Label for the image is NORMAL**")
                 a = y_pred.max()
                 a = a*100
                 st.write("**Accuracy:** ",a,"%")
             else:
                 prediction1 = model1.predict(img).argmax()
-                st.title("Predicted Label for the image is {}".format(doan [prediction1]))
+                st.write("**Predicted Label for the image is {}**".format(doan [prediction1]))
                 b = y_pre.max()
                 b = b*100
                 st.write("**Accuracy:** ", b,"%")
