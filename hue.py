@@ -43,6 +43,8 @@ if selected == "Diagnostic":
     
     if uploaded_file is not None:
         # Convert the file
+        imga = image.load_img(uploaded_file,target_size=(256,256))
+        st.image(uploaded_file, channels="RGB")
         img = image.load_img(uploaded_file,target_size=(64,64))
         #st.image(uploaded_file, channels="RGB")
         #plt.imshow(img)
@@ -50,7 +52,6 @@ if selected == "Diagnostic":
         img = img.reshape(1,64,64,3)
         img = img.astype('float32')
         img = img/255
-        st.image(img, channels="RGB")
         #Button
         Genrate_pred = st.button("Generate Prediction") 
     
