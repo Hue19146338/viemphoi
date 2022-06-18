@@ -43,7 +43,7 @@ if selected == "Diagnostic":
     
     if uploaded_file is not None:
         # Convert the file
-        imga = image.load_img(uploaded_file,target_size=(128,128))
+        imga = image.load_img(uploaded_file,target_size=(256,256))
         st.image(imga, channels="RGB")
         img = image.load_img(uploaded_file,target_size=(64,64))
         #st.image(uploaded_file, channels="RGB")
