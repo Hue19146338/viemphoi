@@ -50,7 +50,7 @@ if selected == "Diagnostic":
         img = img.reshape(1,64,64,3)
         img = img.astype('float32')
         img = img/255
-        t.image(img, channels="RGB")
+        st.image(img, channels="RGB")
         #Button
         Genrate_pred = st.button("Generate Prediction") 
     
