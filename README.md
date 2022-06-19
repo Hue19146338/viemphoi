@@ -1,4 +1,3 @@
-# viemphoi
 # Diagnosis of pneumonia based on x-ray images
 - file 'Hue.h5' is the file trained to predict pneumonia or not
 - file 'Chuandoan.h5' is the file trained to predict bacterial or viral pneumonia
