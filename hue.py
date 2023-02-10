@@ -29,6 +29,10 @@ Ngoài ra lực lượng bác sĩ X quang được đào tạo ở các nước 
 """)
     st.write("Với các datasets là các hình ảnh được lấy từ kagle, thông qua Google Colab, em tạo ra được một model trainning với độ chính xác là 93%. Các dữ liệu model training sẽ được đưa lên webApp Streamlit, để thao tác cũng như hiển thị kết quả một cách dễ dàng hơn.")
     st.write("Do thời lượng cũng như kiến thức còn hạn hẹp nên trong quá trình tạo dựng mô hình còn nhiều sai sót, mong thầy và các bạn thông cảm và góp ý.")
+    st.write("----------------------------------------------------------------------------------------")
+    st.write("Link Datasets: https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia")
+    st.write("Link Github: https://github.com/Hue19146338/viemphoi")
+    st.write("Link youtube: https://www.youtube.com/watch?v=NhHn3bKtgU8")
     
 if selected == "Diagnostic":
     
